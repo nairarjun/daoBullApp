@@ -97,7 +97,7 @@ class CreateOrganisation extends React.Component {
                     newSelectedDAO = daoList.data.rows.filter(obj => obj.data.daoname === selectedOrganisation)
                 }
                 if (newSelectedDAO.length > 0)
-                    this.props.history.push(`/organisation/Shareholders/${newSelectedDAO[0].data.id}`)
+                    window.location = `/organisation/Shareholders/${newSelectedDAO[0].data.id}`
                 else
                     this.props.history.push('/')
             }
