@@ -74,7 +74,7 @@ class CreateOrganisation extends React.Component {
             minutesvote,
             token: (`${shareHoldersinfo.amount} `).concat(shareHoldersinfo.symbol),
             users: shareHoldersAccount.map(value => value.shareholderAccount),
-            balances: shareHoldersAccount.map(value => value.balance)
+            balances: shareHoldersAccount.map(value => (`${value.balance} `).concat(shareHoldersinfo.symbol))
 
         }
         this.setState({ step: 0, loading: true, isEditClick: false })
@@ -97,7 +97,7 @@ class CreateOrganisation extends React.Component {
                     newSelectedDAO = daoList.data.rows.filter(obj => obj.data.daoname === selectedOrganisation)
                 }
                 if (newSelectedDAO.length > 0)
-                    this.props.history.push(`/organisation/Shareholeders/${newSelectedDAO[0].data.id}`)
+                    this.props.history.push(`/organisation/Shareholders/${newSelectedDAO[0].data.id}`)
                 else
                     this.props.history.push('/')
             }
@@ -181,21 +181,34 @@ class CreateOrganisation extends React.Component {
             } else {
                 shareHoldersinfo.symbolErrMsg = ''
             }
-
+            let tootal = 0
             for (let i = 0; i < shareHoldersAccount.length; i++) {
                 const regex = /[^a-z0-5]/gm;
-                var regex1 = new RegExp('(\\d+(?:\\.\\d+)?\\s' + shareHoldersinfo.symbol + ')')
-                if (!(regex1.exec(shareHoldersAccount[i].balance))) {
+                let bal = shareHoldersAccount[i].balance.split(' ')[0]
+                tootal = Number(bal) + tootal
+                if (Number(bal) > shareHoldersinfo.amount) {
                     isError = true
-                    shareHoldersAccount[i].balanceError = `Balance:100 ${shareHoldersinfo.symbol}`
-                } else {
-                    shareHoldersAccount[i].errMsg = ''
+                    shareHoldersAccount[i].balanceError = 'overdrawn balance'
                 }
+
+                if (Number(bal) > 0) {
+                    shareHoldersAccount[i].errMsg = ''
+                    shareHoldersAccount[i].balance = bal.trim()
+
+                } else {
+                    isError = true
+                    shareHoldersAccount[i].balanceError = `Must transfer positive quantity`
+                }
+
                 if (shareHoldersAccount[i].shareholderAccount.length < 12 || regex.exec(shareHoldersAccount[i].shareholderAccount) != null || shareHoldersAccount[i].shareholderAccount.length > 14 || shareHoldersAccount[i].shareholderAccount === '') {
                     isError = true
                     shareHoldersAccount[i].errMsg = 'Account names must be 12 characters long and only include the characters 12345abcdefghijklmnopqrstuvwxyz'
                 } else {
                     shareHoldersAccount[i].errMsg = ''
+                }
+                if (tootal > shareHoldersinfo.amount && i === shareHoldersAccount.length - 1) {
+                    alert('overdrawn balance')
+                    isError = true
                 }
             }
         }
@@ -219,6 +232,10 @@ class CreateOrganisation extends React.Component {
     onShareNameChange = (event, value, contentType, i) => {
         let shareHoldersinfo = this.state.shareHoldersinfo
         shareHoldersinfo[contentType] = (event.target.value).trim()
+        if (shareHoldersinfo.symbolErrMsg !== '' && contentType === 'symbol' && event.target.value !== '')
+            shareHoldersinfo.symbolErrMsg = ''
+        if (shareHoldersinfo.amountErrMsg !== '' && contentType === 'amount' && event.target.value !== '')
+            shareHoldersinfo.amountErrMsg = ''
         this.setState({ shareHoldersinfo })
     }
 
@@ -350,17 +367,18 @@ class CreateOrganisation extends React.Component {
                                 <div className="errMsg" style={{ marginBottom: '0px', width: '160px', marginRight: '16px' }}>{this.state.shareHoldersinfo.amountErrMsg}</div>
                                 <div className="errMsg" style={{ marginBottom: '0px' }}>{this.state.shareHoldersinfo.symbolErrMsg}</div>
                             </div>
+                            <div className="flexContainer">
+                                <div className='share-col-1'>Shareholders <i data-tip data-for="CO_Shareholders_Id" className="fas fa-question-circle toolTipQuestion"></i>
+                                    <CommonTooltip tooltipId="CO_Shareholders_Id" tooltipName="Shareholders"></CommonTooltip>
+                                </div>
+                                <div className='share-col-2'>Balances <i data-tip data-for="CO_Balances_Id" className="fas fa-question-circle toolTipQuestion"></i>
+                                    <CommonTooltip tooltipId="CO_Balances_Id" tooltipName="Balances"></CommonTooltip>
+                                </div>
+                            </div>
 
                         </span>
                     }
-                    <div className="flexContainer">
-                        <div className='share-col-1'>Shareholders <i data-tip data-for="CO_Shareholders_Id" className="fas fa-question-circle toolTipQuestion"></i>
-                            <CommonTooltip tooltipId="CO_Shareholders_Id" tooltipName="Shareholders"></CommonTooltip>
-                        </div>
-                        <div className='share-col-2'>Balances <i data-tip data-for="CO_Balances_Id" className="fas fa-question-circle toolTipQuestion"></i>
-                            <CommonTooltip tooltipId="CO_Balances_Id" tooltipName="Balances"></CommonTooltip>
-                        </div>
-                    </div>
+
                     <div className="flexContainer">
                         <div className="errMsg" style={{ marginBottom: '0px', width: '424px', marginRight: '16px' }}>{this.state.shareHoldersAccount[i].errMsg}</div>
                         <div className="errMsg" style={{ marginBottom: '0px', width: '100px' }}>{this.state.shareHoldersAccount[i].balanceError}</div>
@@ -373,8 +391,9 @@ class CreateOrganisation extends React.Component {
                             placeholder={'Enter EOS Account Name'} />
 
                         <input type="text"
+                            type='number'
                             className='organisations-TextBox org-txtBox-col-2'
-                            value={this.state.shareHoldersAccount[i].balance}
+                            value={this.state.shareHoldersAccount[i].balance === '' ? this.state.shareHoldersAccount[i].balance : Number((this.state.shareHoldersAccount[i].balance.split(' '))[0])}
                             onChange={(event, newValue) => this.onShareNameAccountChange(event, newValue, 'balance', i)}
                             placeholder={'-'} />
 

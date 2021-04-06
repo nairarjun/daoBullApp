@@ -1,7 +1,7 @@
 module.exports = {
     organisationEditBtnData: [
         {
-            type: 'Shareholeders',
+            type: 'Shareholders',
             data: [{
                 title: 'Distribute unallocated shares', live: true,
                 content: {
@@ -57,9 +57,9 @@ module.exports = {
     sideMenu: [
         {
             id: 0,
-            mainMenu: 'Shareholeders', headerBtnName: 'Edit',
+            mainMenu: 'Shareholders', headerBtnName: 'Edit',
             subMenu: [
-                { name: 'Shareholeders', live: true },
+                { name: 'Shareholders', live: true },
                 { name: 'Statistics', live: false }
             ]
         },

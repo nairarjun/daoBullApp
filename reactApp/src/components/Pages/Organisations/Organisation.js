@@ -157,7 +157,7 @@ class Organisation extends Component {
                             <div key={i} className="" style={{ display: 'flex' }}>
                                 <div
                                     className={`DI_Organisation_SubHeader_Text ${(activeSubMenu === '' && i === 0) || (i === 0) ? 'DI_Organisation_SubHeader_Text_Active' : ''} `}>
-                                    {!menu.live && <i className="fa fa-lock" style={{ color: 'white', marginRight: "10px" }}></i>}{menu.name} {!menu.live && <span style={{ fontWeight: 100, marginLeft: "10px", fontSize: '13px' }}>(Comming soon)</span>}</div>
+                                    {!menu.live && <i className="fa fa-lock" style={{ color: 'white', marginRight: "10px" }}></i>}{menu.name} {!menu.live && <span style={{ fontWeight: 100, marginLeft: "10px", fontSize: '13px' }}>(Coming soon)</span>}</div>
                             </div>)
                     })}
             </div>

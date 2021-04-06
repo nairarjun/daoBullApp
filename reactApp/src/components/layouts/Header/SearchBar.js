@@ -30,7 +30,7 @@ class SearchBar extends Component {
             let selectedDAO = this.props.organisationList.filter((org) =>
                 org.data.daoname.toUpperCase() === this.state.daoValue.toUpperCase())
             if (selectedDAO.length > 0)
-                this.props.history.push(`/organisation/Shareholeders/${selectedDAO[0].data.id}`)
+                this.props.history.push(`/organisation/Shareholders/${selectedDAO[0].data.id}`)
             else {
                 alert(`DAO DOESN'T EXIT's`)
                 this.setState({ alertBox: true })
@@ -62,7 +62,7 @@ class SearchBar extends Component {
     onSelectOfDao = async (e, dao) => {
         this.setState({ daoValue: dao.daoname, selectedDao: dao })
         await this.props.setSelectedDAO(dao)
-        this.setState({ clickedOpenDaoSearch: false }, () => this.props.history.push(`/organisation/Shareholeders/${dao.id}`))
+        this.setState({ clickedOpenDaoSearch: false }, () => this.props.history.push(`/organisation/Shareholders/${dao.id}`))
     }
 
     handleClickInside = () => {

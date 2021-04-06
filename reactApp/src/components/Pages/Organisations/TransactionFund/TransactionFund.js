@@ -75,19 +75,44 @@ function TransactionFund(props) {
         let isError = false,
             token = props.selectedDAO.token.split(' ')[1],
             myshareHoldersAccount = JSON.parse(JSON.stringify(shareHoldersAccount))
-
+        let tootal = 0
         for (let i = 0; i < myshareHoldersAccount.length; i++) {
             const regex = /[^a-z0-5]/gm;
-            var regex1 = new RegExp('(\\d+(?:\\.\\d+)?\\s' + token + ')')
-            if (!(regex1.exec(myshareHoldersAccount[i].balance))) {
-                isError = true
-                myshareHoldersAccount[i].balanceError = `Symbol:${token}`
-            } else if (myshareHoldersAccount[i].balance.split(' ')[0] > props.activeEosAccountBal) {
+            // var regex1 = new RegExp('(\\d+(?:\\.\\d+)?\\s' + token + ')')
+            // if (!(regex1.exec(myshareHoldersAccount[i].balance))) {
+            //     isError = true
+            //     myshareHoldersAccount[i].balanceError = `Symbol:${token}`
+            // } else
+            let bal = myshareHoldersAccount[i].balance.split(' ')[0]
+            tootal = Number(bal) + tootal
+            if (((index === 1 && Number(bal) > props.unallocatedSharesAmt) ||
+                (index === 2 && Number(bal) > props.activeEosAccountBal))) {
                 isError = true
                 myshareHoldersAccount[i].balanceError = 'overdrawn balance'
-            } else {
-                myshareHoldersAccount[i].balanceError = ''
             }
+
+            if (Number(bal) > 0) {
+                myshareHoldersAccount[i].myshareHoldersAccount = ''
+                myshareHoldersAccount[i].balance = bal.trim()
+
+            } else {
+                isError = true
+                myshareHoldersAccount[i].balanceError = `Must transfer positive quantity`
+            }
+            if (((index === 1 && tootal > props.unallocatedSharesAmt) ||
+                (index === 2 && tootal > props.activeEosAccountBal))
+                && i === myshareHoldersAccount.length - 1) {
+                alert('overdrawn balance')
+                isError = true
+            }
+            // if (myshareHoldersAccount[i].balance.split(' ')[0] > props.activeEosAccountBal) {
+            //     isError = true
+            //     myshareHoldersAccount[i].balanceError = 'overdrawn balance'
+            // } else {
+            //     myshareHoldersAccount[i].balanceError = ''
+            // }
+            // let bal = myshareHoldersAccount[i].balance
+            // myshareHoldersAccount[i].balance = (bal.trim()).concat(` ${token}`)
 
             if (regex.exec(myshareHoldersAccount[i].shareholderAccount) != null || myshareHoldersAccount[i].shareholderAccount.length < 12 || regex.exec(myshareHoldersAccount[i].shareholderAccount) != null || myshareHoldersAccount[i].shareholderAccount.length > 14 || myshareHoldersAccount[i].shareholderAccount === '') {
                 isError = true

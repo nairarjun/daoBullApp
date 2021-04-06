@@ -14,7 +14,7 @@ const status = [
     type = [
         { key: 'All', value: 'all' },
         { key: 'Voting', value: 'Voting' },
-        { key: 'Financials', value: 'Financials' },
+        // { key: 'Financials', value: 'Financials' },
         { key: 'Shareholder', value: 'Shareholders' }
     ]
 

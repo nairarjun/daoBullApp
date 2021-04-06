@@ -46,14 +46,14 @@ function TransactionType(props) {
                     daoid: props.selectedDAO.id,
                     creator: props.activeEosAccount,
                     user: tokenList[i].shareholderAccount,
-                    amount: tokenList[i].balance
+                    amount: (`${tokenList[i].balance} `).concat(props.selectedDAO.token.split(' ')[1])
                 }
                 data.push(await eosio.transaction(props.activeEosAccount, 'crttokenprp', { ...tokenInfp }))
             } else if (index === 2) {
                 tokenInfp = {
                     from: props.activeEosAccount,
                     to: tokenList[i].shareholderAccount,
-                    quantity: tokenList[i].balance,
+                    quantity: (`${tokenList[i].balance} `).concat(props.selectedDAO.token.split(' ')[1]),
                     memo: 'memo'
                 }
                 data.push(await eosioDaoToken.transaction(props.activeEosAccount, 'transfer', { ...tokenInfp }))
@@ -91,7 +91,7 @@ function TransactionType(props) {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    
+
     return (
         <div ref={myRef} onClick={handleClickOutside}>
             <div className="DI_Edit_Organisation" onClick={handleClickInside}>

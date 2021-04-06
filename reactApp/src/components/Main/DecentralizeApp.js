@@ -73,15 +73,16 @@ class DecentralizeApp extends Component {
       }
 
       let totalData = 0,
-        creators = await this.state.eosio.getTableScope('daotokens123', 'accounts', 'bigpicturesw'),
-        daotokensList = await this.state.eosio.getTableRows('daotokens123', accountName, 'accounts')
-
+        creators = await this.state.eosio.getTableScope('daotokens123', 'accounts', 'bigpicturesw')
+        let daotokensList = {}
       if (creators.rows && creators.rows.length > 0) {
+        let creatorsCount= creators.rows.filter(obj=>obj.scope===accountName)
+        daotokensList = await this.state.eosio.getTableRows('daotokens123', accountName, 'accounts', 0, creatorsCount[0].count, creatorsCount[0].count)
         for (var i = 0; i < creators.rows.length; i++)
           totalData += creators.rows[i].count;
         await this.props.setCreatorsList(creators.rows)
       }
-      if (daotokensList.data.rows && daotokensList.data.rows.length > 0) {
+      if (Object.keys(daotokensList).length > 0 && daotokensList.data.rows && daotokensList.data.rows.length > 0) {
         for (var i = 0; i < daotokensList.data.rows.length; i++)
           await this.props.setDaotokensList(daotokensList.data.rows)
       }
