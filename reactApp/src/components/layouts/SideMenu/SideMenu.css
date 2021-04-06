@@ -33,10 +33,13 @@
 .sideMenu-parent{
     height: 37px;
     box-sizing: border-box;
-    padding: 5px 15px;
+    padding: 0 0 0 15px;
     /* width: 190.5px; */
     margin-top: 11px;
     margin-right: 20px;
+    border: 2px solid transparent;
+    align-items: baseline;
+    display: flex;
 }
 .sideMenu-parent-active{
   border: 2px solid var(--di-primary);
@@ -61,6 +64,13 @@
     letter-spacing: 0.04px;
     line-height: 17px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .sidemenu-title_comingSoon {
+    font-size: 10px;
+    font-weight: 500;
+    margin-left: 5px;
   }
 
   .sideMenu-parent-active-title{
