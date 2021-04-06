@@ -23,7 +23,7 @@ const SideMenu = (props) => {
                         }
                     }}>
                         <span className={`sidemenu-title${props.match.params.menu===menu.mainMenu ? ' sideMenu-parent-active-title' : ' '}`}>{menu.locked === true ? <i className="fa fa-lock"></i> : null}&nbsp;{menu.mainMenu}
-                            {menu.locked === true ? <sapn className="sidemenu-title_comingSoon">(Comming soon)</sapn> : null}
+                            {menu.locked === true ? <span className="sidemenu-title_comingSoon">(Comming soon)</span> : null}
                         </span>
                     </div>)
                 })}
