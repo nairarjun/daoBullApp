@@ -1,0 +1,14 @@
+1. my account is "tejaswitestn" and and i want acesss Forest Fund dao whose creator is "vishmhatre55" 
+   can I acesss it?
+
+2. if user is not connected to wallet then are we going to show search boxs
+
+3.Distribute unallocated shares new existing
+if I'm in pokerwatch dao and already allocated share to vishmhatre55 10 XYZ can I send him again s0me shares
+
+4 Transfer Personal Holding --->cmd 
+suppose vishmhatre55 is not creator of pokerwatch dao so here transfer means is he transfer from his account to another
+means he had currently 10 tokns so he can pass his 5 tokns
+
+5.New Dao Transfer
+6 in voting section how we can vote

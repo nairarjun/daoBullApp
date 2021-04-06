@@ -1,0 +1,118 @@
+.DI_homePage_main {
+    background-color: #F9F9F9;
+}
+.DI_HP_Feature_wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 44px;
+    margin-top: 30px;
+}
+.DI_HP_FeatureRow_wrapper {
+    max-width: 720.92px;
+    display: flex;
+    justify-content: center;
+}
+.DI_HP_featureCard {
+ 
+    text-align: left;
+    margin: 15px 10px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 187px;
+    width: 187px;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-top: 0px;
+    box-shadow: 0 2px 4px 3px rgba(0,0,0,0.08);
+}
+.DI_HP_feature_img {
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+.DI_HP_feature_title {
+    height: 20px;
+    width: 157px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 17px;
+}
+.DI_HP_feature_text {
+    height: 67px;
+    width: 157px;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0.03px;
+    line-height: 14px;
+}
+.DI_HP_Bottom_wrapper {
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+}
+.BottomDesign_half_curve {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    background-color: #CCCCCC;
+    border-radius: 1000px;
+    transform: translateY(90%) scaleX(1.4);
+}
+
+.div2{
+    width: 100%;
+    /* margin-top: 80px; */
+    background-repeat: no-repeat;
+    /* height: 100% !important; */
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background: url('../../../Assets//images/1x//right\ hand\ dots.png') top center no-repeat;
+    margin: 0 auto;
+    /* background: url('./righthanddots.png') no-repeat center center fixed; */
+    background-position-y: -255%;
+    transform: translateX(15%);
+}
+
+.div1{
+    width: 50%;
+    /* margin-top: 80px; */
+    background-repeat: no-repeat;
+    /* height: 100% !important; */
+    /* width: 527px; */
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background: url('../../../Assets//images/1x/Left\ hand\ dots.png') top center no-repeat;
+    margin: 0 auto;
+    /* background: url('./lefthanddots.png') no-repeat center center fixed; */
+    background-position-y: -255%;
+    transform: translateX(-8%);
+}
+#wrapperDAoBull{
+    display:-webkit-flex;
+    -webkit-justify-content:center;
+    padding-top: 80px;
+    display:flex;
+    height: 570px;
+    justify-content:center;
+}
+#wrapperDAoBull div{
+    -webkit-flex:1;
+    flex:1;
+    border:thin solid #777;
+    /* padding-top: 80px; */
+}

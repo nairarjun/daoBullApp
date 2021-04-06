@@ -1,0 +1,65 @@
+.DI_HP_SubCompo_Wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.DaoBull-subHeading {
+    /* background:-webkit-linear-gradient(164.46deg , #FFFFFF 0%, #FFFFFF 100%) !important; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: black  !important;
+}
+.DI_HP_SubCompo_Title {
+    /* background: -webkit-linear-gradient(164.46deg , #DC62F9 0%, #14F8FF 100%); */
+    /* background: -webkit-linear-gradient(164.46deg , #14F8FF 0%, #DC62F9 100%); */
+    background: -webkit-linear-gradient(164.46deg , #1a49f4 0%, #ff5c66 100%);
+   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: linear-gradient(164.46deg, #DC62F9 0%, #14F8FF 100%); */
+
+    /* color: #000000; */
+    /* font-family: "Helvetica Neue"; */
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.DI_HP_SubCompo_Text {
+    color: #000000;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    display: flex;
+    justify-content: center;
+    max-width: 525px;
+    margin-left: auto;
+    text-align: center;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.DI_HP_SubCompo_Button {
+    height: 35px;
+    width: 146.08px;
+    color: var(--di-primary);
+    background-color: #FFFFFF;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 17px;
+    text-align: center;
+    border: 2px solid var(--di-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+}
+.DI_HP_SubCompo_Button:hover {
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 35%);
+}
+

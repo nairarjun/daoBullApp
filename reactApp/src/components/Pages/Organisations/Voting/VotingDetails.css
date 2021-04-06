@@ -1,0 +1,53 @@
+.voting-dtls-subHeader{
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0.07px;
+    line-height: 32px;
+}
+
+.voting-dtls-result{
+  color: #A7A7A7;
+  font-size: 16px;
+  letter-spacing: 0.04px;
+  line-height: 18px;
+  padding-top: 10px;
+  display: flex;
+}
+
+.votig-proposer{
+  color: #000000;
+  font-size: 15px;
+  letter-spacing: 0.04px;
+  line-height: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.voting-description{
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0.04px;
+    line-height: 18px;
+}
+.voting-Dtls-modal{
+    width: 710px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0px !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%)!important;
+}
+.voting-modal .modal-dialog {
+    width: 710px !important;
+}
+.voting-Dtls-modal .modal-dialog {
+    width: 100% !important;
+}
+.voting-Dtls-modal .modal-dialog .modal-content {
+    padding: 25.5px 22.27px 60px 25.5px !important;
+   
+}

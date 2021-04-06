@@ -1,0 +1,220 @@
+.voting-crdDtls-footer{
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.voteBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 120px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.04px;
+  line-height: 17px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.voteBtn-yesBtn{
+  color: #00C517;
+  border: 2px solid #00C517;
+  margin-right: 27px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);;
+
+}
+.voteBtn-noBtn{
+  color: #FF4141;
+  border: 2px solid #FF4141;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);;
+}
+.voting_header{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    padding-left: 12px;
+    background-color: white;
+    display: flex;
+}
+
+.voting_body{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.voting-card{
+  width: 23.5%;
+  padding-top: 25.27px;
+  padding-left: 21.59px;
+  padding-bottom: 25px;
+  padding-right: 17.91px;
+  margin-right:2%;
+   margin-bottom: 27.76px;  
+  background-color: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+
+}
+.vote-content{
+    width: 100%;
+    color: #000000;
+    font-size: 15px;
+    letter-spacing: 0.04px;
+    line-height: 18px;
+    margin-top: 17.5px;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+}
+
+.vote-green-result{
+  color: #00C517;
+  font-size: 14px;
+  letter-spacing: 0.04px;
+  line-height: 16px;
+}
+
+.vote-green,.vote-red{
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.04px;
+    line-height: 16px;
+}
+
+.vote-green-value{
+    padding-top: 16.5px;
+    padding-bottom: 10px;
+}
+
+.vote-result{
+  color: #000000;
+  font-size: 14px;
+  letter-spacing: 0.04px;
+  line-height: 16px;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #F1F3F7;
+  margin-bottom: 18px;   
+}
+  
+#myProgressGreenBar,#myProgressRedBar {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #0FE83B;   
+}
+
+#myProgressRedBar{ 
+  background-color: #FF4141;
+}
+
+.passedVote{
+  color: #00C517;
+}
+
+.failedVote{
+  color: #FF4141;
+}  
+
+.pendingVote{
+  color: #ffd655;
+}  
+
+.vote-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  width: fit-content;
+  padding-left: 21px;
+  padding-right: 21px;   
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.03px;
+  line-height: 15px;
+  text-align: center;
+  background-color: var(--di-primary);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.voting-status{
+  font-weight: 500;
+  height: 30px;
+  width: 120px;
+  border-radius: 2px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 24%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 12px;
+  padding-right: 7px;
+  margin-right: 22px;
+  position: relative;
+  cursor: pointer;
+}
+
+.votingstatus-down{
+  color: #C5C5C5;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.voting-status-dropdown{
+  height: 106px;
+  width: 100%;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.33);
+}
+
+.votingstatus-text{
+  color: #000000;
+  font-size: 12px;
+  letter-spacing: 0.03px;
+  line-height: 14px;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  bottom: -142px;
+  left: 0;
+  display: block;
+  border-top: none;
+  list-style: none;
+  margin: 0;
+  padding: 8px 3px 3px 7px;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 33%);
+}
+
+.options.show {
+  display: block;
+}
+
+.options li {
+  cursor: pointer;
+  height: 30px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.03px;
+  line-height: 15px;
+} 

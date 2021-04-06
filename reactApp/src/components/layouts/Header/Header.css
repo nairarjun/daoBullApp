@@ -1,0 +1,58 @@
+.DI_header_main {
+    height: 80px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 29.5px 0 28.1px;
+}
+.DI_logo {
+    height: 80px;
+    /* width: 209.6px; */
+    color: var(--black);
+    font-weight: bold;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 28px;
+    /* font-weight: 500; */
+    letter-spacing: 0.07px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    cursor: pointer;
+}
+.DI_logout_wapper {
+    height: 36px;
+    width: 141px
+}
+.DI_nav_main {
+    display: flex;
+    justify-content: center;
+}
+.DI_Setting_wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 27.84px;
+}
+i.DI_Settings_icon {
+    height: 23px;
+    width: 19px;
+    color: #000000;
+    font-family: FontAwesome;
+    font-size: 22px;
+    letter-spacing: 0.06px;
+    line-height: 23px;
+    cursor: pointer;
+}
+
+.DI_Settings_icon:hover {
+    transform: scale(1.2);
+}
+
+
+  

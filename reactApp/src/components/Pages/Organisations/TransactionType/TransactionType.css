@@ -1,0 +1,40 @@
+.transactionType{
+    height: fit-content;
+    width: fit-content;
+    position: relative; 
+    float:right; 
+    margin-right: 20.37px;
+    margin-top: 19px;
+    padding: 7.5px 47px 12.5px 14.5px  !important;
+}
+
+.transaction-type-modal{
+    height: 296px !important;
+    box-shadow: none  !important;
+}
+
+.transactionTypeContent{
+    font-weight: 500;
+    height: 30px;
+    color: #000000;
+    font-size: 12px;
+    letter-spacing: 0.03px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.transactionTypeContent .lock{
+    margin-right: 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 12px;
+}
+.transactionTypeContentDeActive{
+    color:#8E8E8E;
+    cursor: none;
+}
+

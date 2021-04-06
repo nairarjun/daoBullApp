@@ -1,0 +1,161 @@
+
+.transfersTable_heading {
+    color: #000000;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 19px;
+    height: 40px;
+    border-top: none !important;
+    border-bottom: 1px solid #E5E5E5 !important;
+}
+.transfersTable_item {
+    height: 68px;
+    padding-top: 25px !important;
+    color: #000000;
+    /* font-weight: 300; */
+    /* font-family: "Helvetica Neue"; */
+    font-size: 16px;
+    letter-spacing: 0.04px;
+    line-height: 18px;
+    border-bottom: 1px solid #E5E5E5 !important;
+}
+.DI_FP_Transfers_Table_wrapper {
+    background-color: #FFFFFF;
+    padding-bottom: 14px;
+    padding: 25px 25px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px 2px rgba(0,0,0,0.07);
+
+}
+.transfersTable_amount {
+    text-align: end;
+    padding-right:3% !important;
+}
+.DI_FP_Transfers_Heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center;
+}
+.DI_FP_Transfers_Title {
+    color: #000000;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.06px;
+    line-height: 27px;
+}
+.DI_FP_Export_Wrapper {
+    box-sizing: border-box;
+    height: 35px;
+    cursor: pointer;
+    width: 92px;
+    border: 2px solid rgb(0 0 0 / 7%);
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 2px 4px 2px rgb(0 0 0 / 7%); */
+}
+.DI_FP_Export_Wrapper:hover {
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 35%);
+} 
+.DI_FP_Export_Text {
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 17px;
+    width: 80px;
+}
+.DI_FP_Export_Icon {
+    color: #000000;
+    font-family: FontAwesome;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.DI_FP_Table_BODY {
+    border-bottom: 1px solid #979797;
+}
+
+.DI_FP_Balances_main {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 160px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px 2px rgba(0,0,0,0.07);
+
+}
+.DI_FP_Balances {
+    min-width: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px 10px 15px 41px;
+}
+.DI_FP_Balance_name_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.Balance_dot {
+    height: 20px;
+    width: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,0.2);   
+    margin-right: 10px;
+    margin-top: -2px;
+    border-radius: 100%;
+}
+.Balance_name {
+    color: #000000;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 19px;
+}
+.DI_FP_Balances_quantity {
+    color: #000000;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 28px;
+    letter-spacing: 0.07px;
+    line-height: 34px;
+    margin-bottom: 15px;
+}
+.DI_FP_Balances_Value {
+    color: #848484;
+    /* font-family: "Helvetica Neue"; */
+    font-size: 16px;
+    letter-spacing: 0.04px;
+    line-height: 18px;
+}
+
+.financial-btn{
+    height: 35px;
+    width: 129.08px;
+    color: var(--di-primary);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 17px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--di-primary);
+}

@@ -1,0 +1,360 @@
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    padding-top: 153.42px;
+  }
+  .main-body{
+    background-color: rgb(246, 246, 246);
+    max-height: 100vh;
+  }
+  .card {
+    width: 600px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.13);
+    transition: 0.3s;
+  
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .organisation-btn:hover{
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 35%);
+  }
+  .Orgnisation-container {
+    padding: 23px 30px 30.42px;
+  }
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notify-badge{
+    margin-top: -20px;
+    height: 40px;
+    width: 125px;
+    color: #FFFFFF;
+   
+    background: var(--di-primary);
+    border-radius: 30px 30px 30px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.05px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .card-heading{
+    height: 52px;
+    width: 540px;
+    color: #000000;
+   
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 0.07px;
+    line-height: 34px;
+  }
+  .card-description{
+    height: 54px;
+    width: 540px;
+    color: #000000;
+   
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+  }
+  
+  .card-acessories{
+    padding-top: 23px;
+    box-sizing: border-box;
+    height: 35px;
+    width: 140.5px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+   
+  }
+  
+  .card-acessories-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+  }
+  
+  .organisation-btn {
+    
+    border-radius: inherit;
+    margin-top: 23px;
+    padding: 0px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 17px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: 2px solid var(--di-primary);
+    background-color: var(--di-primary);
+  }
+  
+  .connectBtnIcon{
+    padding-right: 7.47px;
+    padding-left: 22.53px;
+  }
+  
+  .card-bottom{
+    margin-top: 45.34px;
+    height: 105px;
+    width: 540px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.14);
+  }
+  
+  .card-bottom-container{
+    padding: 13.05px 45.1px 7.1px 14.9px;
+    color: #A7A7A7;
+  
+  }
+  
+  .lock{
+    height: 23px;
+    width: 15px;
+    font-size: 22px;
+    letter-spacing: 0.06px;
+    line-height: 23px;
+  }
+  .card-bottom-container-heading{
+    color: #A7A7A7;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.06px;
+    line-height: 27px;
+    padding-left: 12.54px;
+  }
+  
+  .card-bottom-container-summary{
+    color: #727272;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    padding-top: 7px;
+  }
+  
+  .Organisations{
+    margin-top: 10px;
+    height: 36px;
+    width: 540px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+  }
+  .errMsg{
+    margin-bottom: 45.34px;
+    color: red;
+    font-size: 12px;
+  }
+  .organisations-TextBox{
+    box-sizing: border-box;
+    height: 60px;
+    width: 540px;
+    border: none;
+    background-color: #FFFFFF;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    /* cursor: pointer; */
+    font-size: 14px;
+    border: 1px solid #BDB9B9;
+      color: #212529fa;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.12)  !important;
+  }
+  .organisations-TextBox:hover {
+    /* box-shadow: 0 1px 4px 1px rgba(0,0,0,0.25); */
+  }
+  
+  .next-btn{
+    /* background-color: black;
+    color: white;
+    justify-content: center; */
+  }
+  
+  .voting-subInfo{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    margin-bottom: 19.50px;
+  }
+  
+  .voting-txt{
+    margin-bottom: 6px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+  }
+  
+  .voting-value-box{
+  
+      display: flex;
+      align-items: center;
+      margin-bottom: 29px;
+  
+  }
+  
+  .voting-value {
+    height: 50px;
+    width: 100px;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 20px;
+  
+    border: 1px solid #BDB9B9;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 1px rgba(0,0,0,0.12);
+  }
+  .voting-value:hover {
+    box-shadow: 0 1px 4px 1px rgba(0,0,0,0.25);
+  }
+  .voting-next-btn{
+    padding:0px;
+    margin-top: 42.76px;
+  }
+  
+  .flexContainer{
+    display: flex;
+    flex-direction: row;
+  }
+  .share-col-1{
+    height: 29px;
+    width: 424px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+    margin-right: 16px;
+    /* margin-right: -37px; */
+  }
+  
+  .share-col-2{
+    height: 29px;
+    width: 100px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.04px;
+    line-height: 22px;
+  }
+  
+  .org-txtBox-col-1{
+    width: 424px;
+    height: 50px;
+    margin-right: 16px;
+    margin-bottom: 30px;
+    border: 1px solid #BDB9B9;
+  }
+  
+  .org-txtBox-col-2{
+    width: 100px;
+    height: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+    padding-left: 0px;
+    text-align: center;
+    border: 1px solid #BDB9B9;
+  }
+  .toolTipQuestion{
+    color: #BDB9B9;
+    font-size: 12px;
+  }
+  .Daobull_tooltip_content {
+    max-width: 350px;
+  }
+  .returnBtn{
+    margin-left: 5px;
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 0.04px;
+    line-height: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .addMore-share-btn{
+    background-color: white;
+    color: var(--di-primary);
+    margin-top: -18px;
+    width: 129.08px;
+  }
+  
+  .confirmSetup{
+    color: black;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .editSetup{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 73.5px;
+    color: var(--di-primary);
+    font-weight: 400;
+  }
+  
+  .setup-next-btn{
+    width: 184px;
+  }
+  
+  .organisationHeading{
+    height: 535px;
+    top: 43px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    padding-top: 20px;
+  }
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #212529fa;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #212529fa;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #212529fa;
+  }
+.organisation-connectbtn{
+  height: 40px;
+  width: 100px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: var(--di-primary);
+  background-color: var(--di-primary);
+}
