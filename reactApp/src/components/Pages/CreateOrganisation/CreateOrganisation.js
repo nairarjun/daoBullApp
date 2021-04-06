@@ -13,8 +13,8 @@ import CommonTooltip from '../../Tooltip/CommonTooltip';
 const lastStep = 6;
 
 const defultEditVoteConfiguration = {
-    supportVote: 10,
-    minimalApproval: 10,
+    supportVote: 50,
+    minimalApproval: 0,
     voteDayDuration: 1,
     voteHourDuration: 0,
     voteMinDuration: 0,
@@ -40,10 +40,10 @@ class CreateOrganisation extends React.Component {
             supportVoteErrorInput: '',
             isEditClick: false,
             votingConfiguration: [
-                { name: 'Support %', errMsg: '', values: [{ value: 10, abbrevation: '%', name: 'supportVote' }] },
-                { name: 'Minimal Approval %', errMsg: '', values: [{ value: 10, abbrevation: '%', name: 'minimalApproval', errMsg: '' }] },
+                { name: 'Support %', subName: "(alpha version default 50%)", locked: true, errMsg: '', values: [{ value: 10, abbrevation: '%', name: 'supportVote' }] },
+                { name: 'Minimal Approval %', subName: '(alpha version default 0%)', locked: true, errMsg: '', values: [{ value: 10, abbrevation: '%', name: 'minimalApproval', errMsg: '' }] },
                 {
-                    name: 'Vote Duration', errMsg: '', values: [
+                    name: 'Vote Duration', locked: false, errMsg: '', values: [
                         { value: 1, abbrevation: ' Day', name: 'voteDayDuration', errMsg: '' },
                         { value: 0, abbrevation: ' Hours', name: 'voteHourDuration', errMsg: '' },
                         { value: 0, abbrevation: ' Mins', name: 'voteMinDuration', errMsg: '' }]
@@ -130,10 +130,10 @@ class CreateOrganisation extends React.Component {
     next = (stateName) => {
         let { step, selectedOrganisation, errMsg = '', votingConfiguration, supportVoteErrorInput = '', shareHoldersinfo, shareHoldersAccount, isError = false } = this.state
         let cloneVotingConfig = [
-            { name: 'Support %', errMsg: '', values: [{ value: this.state.editVoteConfiguration.supportVote, abbrevation: '%', name: 'supportVote' }] },
-            { name: 'Minimal Approval %', errMsg: '', values: [{ value: this.state.editVoteConfiguration.minimalApproval, abbrevation: '%', name: 'minimalApproval', errMsg: '' }] },
+            { name: 'Support %', subName: "(alpha version default 50%)", locked: true, errMsg: '', values: [{ value: this.state.editVoteConfiguration.supportVote, abbrevation: '%', name: 'supportVote' }] },
+            { name: 'Minimal Approval %', subName: '(alpha version default 0%)', locked: true, errMsg: '', values: [{ value: this.state.editVoteConfiguration.minimalApproval, abbrevation: '%', name: 'minimalApproval', errMsg: '' }] },
             {
-                name: 'Vote Duration', errMsg: '', values: [
+                name: 'Vote Duration', locked: false, errMsg: '', values: [
                     { value: this.state.editVoteConfiguration.voteDayDuration, abbrevation: ' Day', name: 'voteDayDuration', errMsg: '' },
                     { value: this.state.editVoteConfiguration.voteHourDuration, abbrevation: ' Hours', name: 'voteHourDuration', errMsg: '' },
                     { value: this.state.editVoteConfiguration.voteMinDuration, abbrevation: ' Mins', name: 'voteMinDuration', errMsg: '' }]
@@ -272,7 +272,7 @@ class CreateOrganisation extends React.Component {
             <div className='voting-subInfo'>Edit at a later date within voting settings.</div>
             {votingConfiguration.map((config, i) => {
                 return (<span key={i}>
-                    <div className="voting-txt">{config.name} <i data-tip data-for={`CO_config_${config.name}_Id`} className="fas fa-question-circle toolTipQuestion"></i>
+                    <div className="voting-txt">{config.locked === true ? <i className="fa fa-lock"></i> : null}&nbsp;{config.name} {config.subName} <i data-tip data-for={`CO_config_${config.name}_Id`} className="fas fa-question-circle toolTipQuestion"></i>
                         <CommonTooltip tooltipId={`CO_config_${config.name}_Id`} tooltipName={config.name}></CommonTooltip>
                     </div>
                     <span className="voting-value-box">
@@ -281,6 +281,7 @@ class CreateOrganisation extends React.Component {
                                 <div className={`${data.abbrevation} observtion-suffix`} key={k} >
                                     <input
                                         type="Number"
+                                        disabled={config.locked}
                                         className={`voting-value ${data.abbrevation}`}
                                         // value={`${this.state.editVoteConfiguration[data.name]}${data.abbrevation}`}
                                         key={k}

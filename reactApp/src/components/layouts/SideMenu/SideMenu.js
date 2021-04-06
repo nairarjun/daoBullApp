@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 
 
 const sideMenu = [
-    { mainMenu: 'Shareholeders', subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] },
-    { mainMenu: 'Financials', subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] },
-    { mainMenu: 'Voting', subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] }
+    { mainMenu: 'Shareholeders', locked: false, subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] },
+    { mainMenu: 'Voting', locked: false, subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] },
+    { mainMenu: 'Financials', locked: true, subMenu: [{ name: 'Holders', live: true }, { name: 'Statistics', live: false }] },
 ]
 const upcommingFeautre = ['Pay Roll', 'Boards', 'Social', 'Fundraising', 'Permissions', 'App Center']
 
@@ -18,9 +18,12 @@ const SideMenu = (props) => {
             <div className="menu">
                 {sideMenu.map((menu, i) => {
                     return (<div key={i} className={`sideMenu-parent${props.match.params.menu===menu.mainMenu ? ' sideMenu-parent-active' : ' '}`}  onClick={()=>{
-                        props.history.push(`/organisation/${menu.mainMenu}/${props.selectedDAO.id}`)
+                        if (menu.locked !== true) {
+                            props.history.push(`/organisation/${menu.mainMenu}/${props.selectedDAO.id}`)
+                        }
                     }}>
-                        <span className={`sidemenu-title${props.match.params.menu===menu.mainMenu ? ' sideMenu-parent-active-title' : ' '}`}>{menu.mainMenu}</span>
+                        <span className={`sidemenu-title${props.match.params.menu===menu.mainMenu ? ' sideMenu-parent-active-title' : ' '}`}>{menu.locked === true ? <i className="fa fa-lock"></i> : null}&nbsp;{menu.mainMenu}</span>
+                        {menu.locked === true ? <sapn className="sidemenu-title_comingSoon">(Comming soon)</sapn> : null}
                     </div>)
                 })}
             </div>
