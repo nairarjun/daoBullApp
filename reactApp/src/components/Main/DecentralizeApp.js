@@ -116,12 +116,12 @@ class DecentralizeApp extends Component {
         <Router >
           <ScrollToTop>
             <Switch>
-              <Route exact path="/updateMe" render={() => <Landing />} />
-              <Route exact path="/organisation/:menu/:id" render={(props) => <SideMenuLayout {...propsData}><Organisation {...{ ...props, ...propsData }} /></SideMenuLayout>} />
+              <Route exact path="/" render={() => <Landing />} />
+              {/* <Route exact path="/organisation/:menu/:id" render={(props) => <SideMenuLayout {...propsData}><Organisation {...{ ...props, ...propsData }} /></SideMenuLayout>} />
               <Route exact path="/" render={() => <HeaderLayout {...propsData} ><HomePage /></HeaderLayout>} />
               <Route exact path="/CreateOrganisation"
                 render={(props) => <HeaderLayout {...propsData} ><CreateOrganisation {...{ ...props, ...propsData }} />
-                </HeaderLayout>} />
+                </HeaderLayout>} /> */}
             </Switch>
           </ScrollToTop>
         </Router>

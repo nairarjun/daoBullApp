@@ -14,7 +14,10 @@ class Landing extends Component {
         // this.box = React.createRef();
     }
 
-    updateMe = () => this.setState({ updateMe: true })
+    updateMe = () => {
+        // this.setState({ updateMe: true })
+        window.open('https://twitter.com/daobulls', '_blank');
+    }
     submitMe = () => {
         let email = this.state.email,
             lastAtPos = email.lastIndexOf('@'),
@@ -68,7 +71,7 @@ class Landing extends Component {
                         <div
                             className="dao_landing_upToDateBtn"
                             onClick={this.updateMe}>
-                            Keep Me Up To Date
+                            Get In Touch
                         </div>
                 }
 
