@@ -11,6 +11,7 @@
     "eosjs": "^21.0.3",
     "excellentexport": "^3.6.0",
     "export-to-csv": "^0.2.1",
+    "jquery": "^3.6.0",
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",

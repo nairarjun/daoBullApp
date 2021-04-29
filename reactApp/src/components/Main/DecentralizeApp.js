@@ -7,6 +7,7 @@ import HomePage from '../Pages/HomePage/HomePage';
 import CreateOrganisation from '../Pages/CreateOrganisation/CreateOrganisation';
 import ScrollToTop from '../ScrollToTop/ScrollToTop';
 import HeaderLayout from '../layouts/Header/HeaderLayout';
+import Landing from '../Pages/LandingPage/Landing';
 import SideMenuLayout from "../layouts/SideMenu/SideMenuLayout";
 import Organisation from "../Pages/Organisations/Organisation";
 import EOSIOApi from '../../common/eosio-apiService';
@@ -74,9 +75,9 @@ class DecentralizeApp extends Component {
 
       let totalData = 0,
         creators = await this.state.eosio.getTableScope('daotokens123', 'accounts', 'bigpicturesw')
-        let daotokensList = {}
+      let daotokensList = {}
       if (creators.rows && creators.rows.length > 0) {
-        let creatorsCount= creators.rows.filter(obj=>obj.scope===accountName)
+        let creatorsCount = creators.rows.filter(obj => obj.scope === accountName)
         daotokensList = await this.state.eosio.getTableRows('daotokens123', accountName, 'accounts', 0, creatorsCount[0].count, creatorsCount[0].count)
         for (var i = 0; i < creators.rows.length; i++)
           totalData += creators.rows[i].count;
@@ -115,6 +116,7 @@ class DecentralizeApp extends Component {
         <Router >
           <ScrollToTop>
             <Switch>
+              <Route exact path="/updateMe" render={() => <Landing />} />
               <Route exact path="/organisation/:menu/:id" render={(props) => <SideMenuLayout {...propsData}><Organisation {...{ ...props, ...propsData }} /></SideMenuLayout>} />
               <Route exact path="/" render={() => <HeaderLayout {...propsData} ><HomePage /></HeaderLayout>} />
               <Route exact path="/CreateOrganisation"

@@ -1,0 +1,70 @@
+.dao_landingFlex-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%
+    
+}
+.dao_landing_header{
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: 0.30px;
+    font-weight: bold;
+}
+
+.dao_landing_subheader{
+    margin-top: 1%;
+    font-size: 13px;
+    text-align: center;
+}
+
+.dao_landing_upToDateBtn{
+    padding: 7.5px 25px 7.5px 25px;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.08px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: var(--di-primary);
+}
+
+.dao_landing_email{
+    margin-right:15px;
+    border: none;
+    width: 55%;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 1px rgb(0 0 0 / 12%);
+    padding:0px 0px 0px 12px;
+    height: 32px;
+}
+
+.dao_landingFlex-row{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 423.016px;
+    justify-content: center;
+}
+
+::placeholder {
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 12px;
+    font-weight: bold;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   font-size: 12px;
+   font-weight: bold;
+  }
