@@ -51,7 +51,7 @@ class Landing extends Component {
                 </div>
                 <div className={`DI_HP_SubCompo_Title dao_landing_header`}
                 >
-                    Welcome to Dao Bull
+                    Welcome to DAO Bull
                 </div>
                 <div className="dao_landing_subheader" style={{ width: `${width}px` }}>
                     Winners of the EOS.IO 2021 Hackathon, currently in stealth mode on a mission to change the world.
